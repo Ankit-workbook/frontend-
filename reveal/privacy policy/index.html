@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Documents</title>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .legal-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .legal-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .legal-content {
+            padding: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+        }
+        
+        p, ul, ol {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        .tab-container {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            background-color: var(--light-bg);
+        }
+        
+        .tab-button {
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-grow: 1;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button.active {
+            border-bottom: 3px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .effective-date {
+            text-align: center;
+            font-style: italic;
+            margin-top: 30px;
+            color: #6c757d;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .print-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .print-button:hover {
+            background-color: #2a75e0;
+        }
+        
+        @media print {
+            .tab-buttons, .print-button {
+                display: none;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            .legal-container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 15px;
+            }
+            
+            .tab-button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="legal-container">
+        <div class="legal-header">
+            <h1>Legal Documents</h1>
+        </div>
+        
+        <div class="legal-content">
+            <button class="print-button" id="printButton">Print Document</button>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="terms">Terms and Conditions</button>
+                    <button class="tab-button" data-tab="privacy">Privacy Policy</button>
+                </div>
+                
+                <div id="terms" class="tab-content active">
+                    <h2>Terms and Conditions</h2>
+                    <p class="effective-date">Last Updated: April 12, 2025</p>
+                    
+                    <div class="highlight">
+                        <p>Please read these Terms and Conditions carefully before using the College Reality Platform. By accessing or using our platform, you agree to be bound by these Terms.</p>
+                    </div>
+                    
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing or using the College Reality Platform ("the Platform"), you agree to be bound by these Terms and Conditions and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing the Platform.</p>
+                    
+                    <h3>2. User Accounts</h3>
+                    <p>To access certain features of the Platform, you may be required to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</p>
+                    <p>You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer. You agree to accept responsibility for all activities that occur under your account.</p>
+                    
+                    <h3>3. User Content</h3>
+                    <p>By posting content on the Platform, including but not limited to reviews, comments, images, and videos ("User Content"), you grant us a non-exclusive, royalty-free, transferable, sublicensable, worldwide license to use, store, display, reproduce, modify, and distribute your User Content on the Platform.</p>
+                    <p>You represent and warrant that:</p>
+                    <ul>
+                        <li>You own the content you post or have the right to use and authorize us to use it as described above</li>
+                        <li>The posting of your content does not violate the privacy rights, publicity rights, copyrights, contract rights, or any other rights of any person or entity</li>
+                    </ul>
+                    
+                    <h3>4. Prohibited Conduct</h3>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use the Platform for any illegal purpose or in violation of any local, state, national, or international law</li>
+                        <li>Post false, misleading, or defamatory content</li>
+                        <li>Harass, abuse, or harm another person</li>
+                        <li>Impersonate another user or person</li>
+                        <li>Attempt to gain unauthorized access to other computer systems through the Platform</li>
+                        <li>Use the Platform in a manner that could damage, disable, overburden, or impair the Platform</li>
+                        <li>Post content that is hateful, threatening, pornographic, or that contains nudity or graphic violence</li>
+                        <li>Attempt to interfere with the proper working of the Platform</li>
+                    </ul>
+                    
+                    <h3>5. Content Moderation</h3>
+                    <p>We reserve the right, but not the obligation, to:</p>
+                    <ul>
+                        <li>Monitor the Platform for violations of these Terms</li>
+                        <li>Remove or refuse to post any User Content for any reason</li>
+                        <li>Take any action with respect to User Content that we deem necessary or appropriate</li>
+                        <li>Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights</li>
+                    </ul>
+                    
+                    <h3>6. Intellectual Property</h3>
+                    <p>The Platform and its original content (excluding User Content), features, and functionality are and will remain the exclusive property of the Platform and its licensors. The Platform is protected by copyright, trademark, and other laws of both the United States and foreign countries.</p>
+                    
+                    <h3>7. Third-Party Links</h3>
+                    <p>The Platform may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+                    
+                    <h3>8. Termination</h3>
+                    <p>We may terminate or suspend your account and bar access to the Platform immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                    
+                    <h3>9. Limitation of Liability</h3>
+                    <p>In no event shall we, nor our directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Platform.</p>
+                    
+                    <h3>10. Disclaimer</h3>
+                    <p>Your use of the Platform is at your sole risk. The Platform is provided on an "AS IS" and "AS AVAILABLE" basis. The Platform is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
+                    
+                    <h3>11. Governing Law</h3>
+                    <p>These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.</p>
+                    
+                    <h3>12. Changes to Terms</h3>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                    
+                    <h3>13. Contact Us</h3>
+                    <p>If you have any questions about these Terms, please contact us at [your contact email].</p>
+                </div>
+                
+                <div id="privacy" class="tab-content">
+                    <h2>Privacy Policy</h2>
+                    <p class="effective-date">Last Updated: April 12, 2025</p>
+                    
+                    <div class="highlight">
+                        <p>This Privacy Policy describes how we collect, use, and disclose your personal information when you use the College Reality Platform. By using our Platform, you agree to the collection and use of information in accordance with this policy.</p>
+                    </div>
+                    
+                    <h3>1. Information We Collect</h3>
+                    <p><strong>Personal Information:</strong> When you register for an account, we may collect personally identifiable information, such as your name, email address, and educational information (including but not limited to school name, graduation year, and major).</p>
+                    
+                    <p><strong>User Content:</strong> We collect the content, communications, and other information you provide when you use our Platform, including when you sign up for an account, create or share content, and message or communicate with others.</p>
+                    
+                    <p><strong>Usage Data:</strong> We may collect information about how you use our Platform, such as the types of content you view or engage with, the features you use, the actions you take, and the time, frequency, and duration of your activities.</p>
+                    
+                    <p><strong>Device Information:</strong> We may collect information about the device you use to access our Platform, including the hardware model, operating system and version, unique device identifiers, network information, and IP address.</p>
+                    
+                    <h3>2. How We Use Your Information</h3>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide, maintain, and improve our Platform</li>
+                        <li>Create and manage your account</li>
+                        <li>Process and complete transactions</li>
+                        <li>Send you technical notices, updates, security alerts, and support messages</li>
+                        <li>Respond to your comments, questions, and requests</li>
+                        <li>Communicate with you about products, services, offers, and events offered by us</li>
+                        <li>Monitor and analyze trends, usage, and activities in connection with our Platform</li>
+                        <li>Detect, investigate, and prevent fraudulent transactions and other illegal activities</li>
+                        <li>Personalize and improve the Platform and provide content or features that match user profiles or interests</li>
+                    </ul>
+                    
+                    <h3>3. Sharing Your Information</h3>
+                    <p>We may share your personal information in the following situations:</p>
+                    <ul>
+                        <li><strong>With Your Consent:</strong> We may share your information when you give us explicit permission to do so.</li>
+                        <li><strong>For Legal Reasons:</strong> We may share your information if we believe it is necessary to comply with a legal obligation, protect and defend our rights or property, protect the safety of our users or others, or investigate fraud.</li>
+                        <li><strong>With Service Providers:</strong> We may share your information with third-party vendors, service providers, contractors, or agents who perform services for us.</li>
+                    </ul>
+                    
+                    <h3>4. Data Security</h3>
+                    <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                    
+                    <h3>5. Your Data Protection Rights</h3>
+                    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                    <ul>
+                        <li>The right to access, update, or delete your information</li>
+                        <li>The right to rectification (to correct your information)</li>
+                        <li>The right to object to our processing of your information</li>
+                        <li>The right of restriction (to request that we restrict the processing of your information)</li>
+                        <li>The right to data portability (to receive your information in a structured, commonly used format)</li>
+                        <li>The right to withdraw consent</li>
+                    </ul>
+                    
+                    <h3>6. Cookies and Tracking Technologies</h3>
+                    <p>We use cookies and similar tracking technologies to track activity on our Platform and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.</p>
+                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Platform.</p>
+                    
+                    <h3>7. Children's Privacy</h3>
+                    <p>Our Platform is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us.</p>
+                    
+                    <h3>8. Changes to This Privacy Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.</p>
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    
+                    <h3>9. Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us at [your contact email].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to current button and corresponding content
+                    button.classList.add('active');
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Print functionality
+            document.getElementById('printButton').addEventListener('click', () => {
+                window.print();
+            });
+        });
+    </script>
+</body>
+</html>
